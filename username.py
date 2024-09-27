@@ -5,8 +5,8 @@ import sys
 pygame.init()
 
 # Set the display dimensions
-window_width = 600
-window_height = 400
+window_width = 1920  # Changed to 1920
+window_height = 960   # Changed to 960
 window = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption("Enter Username")
 
@@ -16,9 +16,23 @@ heading_font = pygame.font.SysFont(None, 50)
 
 def username_input_window():
     """Create a window to input the username."""
+
+    # Initialize Pygame
+    pygame.init()
+
+    # Set the display dimensions
+    window_width = 1920  # Changed to 1920
+    window_height = 960   # Changed to 960
+    window = pygame.display.set_mode((window_width, window_height))
+    pygame.display.set_caption("Enter Username")
+
+    # Font settings
+    font = pygame.font.SysFont(None, 60)
+    heading_font = pygame.font.SysFont(None, 100)
+
     input_active = True
     username = ""
-    input_box = pygame.Rect(200, 150, 400, 50)  # Input box position and size
+    input_box = pygame.Rect(760, 530, 440, 60)  # Centered input box position and size
     color_inactive = pygame.Color('lightskyblue3')
     color_active = pygame.Color('dodgerblue2')
     color = color_inactive
@@ -41,7 +55,7 @@ def username_input_window():
         # Redraw input box and text
         window.fill((0, 0, 0))  # Clear the window
         txt_surface = font.render(username, True, color)
-        width = max(200, txt_surface.get_width() + 10)  # Adjust input box width
+        width = max(400, txt_surface.get_width() + 10)  # Adjust input box width
         input_box.w = width
 
         # Draw the input box
@@ -49,16 +63,17 @@ def username_input_window():
         window.blit(txt_surface, (input_box.x + 5, input_box.y + 5))  # Draw text
 
         # Render heading
-        heading_surface = heading_font.render("Enter Username:", True, (255, 215, 0))
-        window.blit(heading_surface, (window_width // 2 - heading_surface.get_width() // 2, 50))
+        heading_surface = heading_font.render("Enter Your Name:", True, (255, 215, 0))
+        window.blit(heading_surface, (window_width // 2 - heading_surface.get_width() // 2, 430))  # Centered heading
 
         pygame.display.flip()
+    
     pygame.quit()  # Quit Pygame
     if username == "":
         sys.exit()
 
     with open("lead.txt", "a") as file:  # Open file in append mode
-            file.write(f"{username}:")  # Write username and score as a comma-separated line
+        file.write(f"{username}:")  # Write username and score as a comma-separated line
     return username
 
 

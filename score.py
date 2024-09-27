@@ -63,7 +63,10 @@ def process_video(input_video):
                 print(f"Frame {frame_num}: No landmarks detected")
 
             frame_num += 1
-
+        #if total_score > 200:
+            #total_score = 98
+        #else:
+            #total_score = total_score/5
         print(f"\nTotal Movement Score: {total_score:.5f}")
         display_score(total_score)  # Display score at the end
 

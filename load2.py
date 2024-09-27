@@ -17,8 +17,11 @@ def play_video(video_path):
             print("Reached end of video or there was an error.")
             break
 
-        # Display the frame in a window
-        cv2.imshow('Video Playback', frame)
+        # Resize the frame to the desired window size
+        resized_frame = cv2.resize(frame, (1280, 960))
+
+        # Display the resized frame in a window
+        cv2.imshow('frame', resized_frame)
 
         # Press 'q' to exit the video early
         if cv2.waitKey(25) & 0xFF == ord('q'):

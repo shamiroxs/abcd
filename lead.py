@@ -6,14 +6,14 @@ import os
 pygame.init()
 
 # Set the display dimensions
-window_width = 600
-window_height = 400
+window_width = 1100
+window_height = 960
 window = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption("Leaderboard")
 
 # Font settings
-font = pygame.font.SysFont(None, 40)
-heading_font = pygame.font.SysFont(None, 50)
+font = pygame.font.SysFont(None, 80)
+heading_font = pygame.font.SysFont(None, 100)
 
 # Define the file path for the leaderboard file
 leaderboard_file = "lead.txt"
@@ -38,15 +38,6 @@ def save_leaderboard(leaderboard):
             file.write(f"{player}:{score}\n")
 
 def display_leaderboard(leaderboard):
-    # Initialize Pygame
-    #pygame.init()
-
-    # Set the display dimensions
-    window_width = 600
-    window_height = 400
-    window = pygame.display.set_mode((window_width, window_height))
-    pygame.display.set_caption("Leaderboard")
-
     """Display the leaderboard in a new Pygame window in a table format."""
     window.fill((0, 0, 0))  # Fill window with black background
     
@@ -58,22 +49,36 @@ def display_leaderboard(leaderboard):
     window.blit(heading_surface, (window_width // 2 - heading_surface.get_width() // 2, 20))
 
     # Render each player's score in a table format
-    y_offset = 100
+    y_offset = 140
     window.blit(font.render("Rank", True, (255, 255, 255)), (50, y_offset - 40))
-    window.blit(font.render("Player", True, (255, 255, 255)), (200, y_offset - 40))
-    window.blit(font.render("Score", True, (255, 255, 255)), (450, y_offset - 40))
+    window.blit(font.render("Player", True, (255, 255, 255)), (300, y_offset - 40))
+    window.blit(font.render("Score", True, (255, 255, 255)), (900, y_offset - 40))
+
+    # Change the font to one that supports emojis, like Segoe UI Emoji (Windows)
+    emoji_font = pygame.font.SysFont('Segoe UI Emoji', 40)  # or 'Apple Color Emoji' on macOS
 
     for index, (player, score) in enumerate(sorted_leaderboard):
         rank_text = font.render(str(index + 1), True, (255, 255, 255))
         player_text = font.render(player, True, (255, 255, 255))
         score_text = font.render(str(score), True, (255, 255, 255))
 
-        # Display rank, player name, and score in a row (acting as a table row)
-        window.blit(rank_text, (50, y_offset))
-        window.blit(player_text, (200, y_offset))
-        window.blit(score_text, (450, y_offset))
+        # Display medals for the top 5 players
+        if index == 0:
+            rank_text = emoji_font.render("🥇", True, (255, 255, 255))  # Gold for 1st place
+        elif index == 1:
+            rank_text = emoji_font.render("🥈", True, (255, 255, 255))  # Silver for 2nd place
+        elif index == 2:
+            rank_text = emoji_font.render("🥉", True, (255, 255, 255))  # Bronze for 3rd place
+        elif index == 3 or index == 4:
+            rank_text = emoji_font.render("🏅", True, (255, 255, 255))  # Medals for 4th and 5th places
+            
 
-        y_offset += 50  # Move down for the next row
+        # Display rank, player name, and score in a row (acting as a table row)
+        window.blit(rank_text, (50, y_offset + 40))
+        window.blit(player_text, (300, y_offset + 40))
+        window.blit(score_text, (900, y_offset + 40))
+
+        y_offset += 80  # Move down for the next row
 
     pygame.display.update()
 
@@ -92,7 +97,19 @@ def main():
     # Example of how to update the leaderboard dynamically
     add_player_score("NewPlayer", 90)  # Adding a new player with a score
 
+    # Get the start time
+    start_time = pygame.time.get_ticks()
+
     while True:
+        current_time = pygame.time.get_ticks()
+        elapsed_time = current_time - start_time
+
+        # Automatically close the window after 5 seconds
+        if elapsed_time > 8000:
+            print("Auto-closing the leaderboard window after 5 seconds.")
+            pygame.quit()
+            sys.exit()
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()

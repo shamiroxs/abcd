@@ -2,7 +2,7 @@ import pygame
 import time
 
 
-def show_pygame_loading_screen(total=300, loading_message="Loading...", load_char_color=(0,138,216), bg_color=(0, 0, 0), text_color=(255, 255, 255), complete_message="Almost There!", delay=0.5):
+def show_pygame_loading_screen(total=300, loading_message="Loading...", load_char_color=(0,138,216), bg_color=(0, 0, 0), text_color=(255, 255, 255), complete_message="Almost There!", delay=0.08):
     """Displays a loading screen using Pygame with a progress bar.
     
     Args:
@@ -65,4 +65,4 @@ def show_pygame_loading_screen(total=300, loading_message="Loading...", load_cha
 
 # Test the loading screen function (this would be removed when integrating)
 if __name__ == "__main__":
-    show_pygame_loading_screen(total=300, delay=0.5)  # Executes for approximately 30 seconds
+    show_pygame_loading_screen(total=300, delay=0.08)  # Executes for approximately 30 seconds

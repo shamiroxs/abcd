@@ -2,7 +2,7 @@ import cv2
 import pygame
 
 
-cap = cv2.VideoCapture(0) 
+cap = cv2.VideoCapture(1) 
 
 # Define the codec and create a VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
@@ -16,11 +16,14 @@ while(True):
     ret, frame = cap.read()
     print(frame_count)
 
-    # Display the resulting frame
-    cv2.imshow('frame', frame)
+    # Resize the frame to the desired window size
+    resized_frame = cv2.resize(frame, (1280, 960))
+
+    # Display the resized frame in a window
+    cv2.imshow('frame', resized_frame)
 
     # Wait for 50 frames before starting to record
-    if frame_count == 50:
+    if frame_count == 150:
         print("Start recording...")
         recording = True
 
@@ -30,7 +33,7 @@ while(True):
 
     frame_count += 1
 
-    if cv2.waitKey(1) & frame_count == 360:
+    if cv2.waitKey(1) & frame_count == 460:
         break
 
 # When everything done, release the capture
