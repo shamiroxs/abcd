@@ -101,7 +101,8 @@ To set up the environment and install necessary libraries, follow these steps:
 
 #### **Acknowledgements**:
 This project is a collaborative effort from our S5CSE 2024 batch.
-- **Project Lead**: Yadhu Krishnan
+- **Idea Generation**: Yadhu Krishnan
+- **Project Lead**: Shamir Ashraf
 - **Mentors**: Rini T Paul, Pristy Paul T
 - **Developers**: Shamir Ashraf (main developer), Ahsan (assistant developer)
 - Special thanks to ChatGPT for technical assistance and our entire class for setting up the classroom and decorations.
