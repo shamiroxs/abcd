@@ -16,6 +16,9 @@ score = 0
 
 def calculate_distance(point1, point2):
     """Calculate Euclidean distance between two points (x1, y1) and (x2, y2)."""
+    # If either point is missing, return distance as 0
+    if point1 is None or point2 is None:
+        return 0
     return math.sqrt((point2[0] - point1[0]) ** 2 + (point2[1] - point1[1]) ** 2)
 
 def process_video(input_video):

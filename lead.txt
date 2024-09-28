@@ -1,7 +1,7 @@
-None:0
+None:79
 vyghari:42
 nananthana:33
-pooja:34
+pooja:78
 ardhra:45
 ardra:66
 arathy chandran:23
@@ -11,7 +11,7 @@ cs:58
 athulya:37
 amala:32
 navneetha:42
-ahsan:36
+ahsan:193
 ashlin:34
 sonam:45
 aachi:34
@@ -26,7 +26,7 @@ NewPlayer:90
 adarsh2:30
 ronal:53
 abhjith s:65
-anusree:54
+anusree:337
 surgith:43
 sweeta:54
 aj:100
@@ -82,3 +82,78 @@ Alan:87
 sedona:166
 arshad:222
 salih:224
+none:0
+player2:1
+don:193
+abhijith:201
+essa:150
+amirtha:154
+jannet:278
+della:333
+teacher 1:54
+nahas:161
+adwaith:205
+rithas:77
+aparna:147
+shehanas:207
+gauthum:270
+yadhu:71
+abhi:243
+test:130
+bts:51
+bts2:181
+toxic hub:294
+basanias:245
+basania 2:94
+angel:227
+nalva team:51
+adhi:241
+kiran:235
+kiran 2:160
+kiran 3:274
+soorya:60
+diya:119
+pooja2:255
+sreeraj:96
+Sreeraj2:177
+joelvava:169
+gaurishankar:97
+varatha:57
+susan:89
+zahariya:223
+afra:113
+afra2:232
+safa:328
+fathima:167
+muhsina:301
+kishnendhu:128
+krishnendhu2:155
+sreeedevi:124
+tiya:154
+gayathri:152
+sivapriya:152
+prince:176
+kp:271
+malavika:148
+jasif:198
+johan:347
+shifana:282
+abdul:115
+adhisankara:132
+ambalika:146
+ak:235
+Eldhose:218
+anandan:162
+ann:163
+anila:152
+meennu:73
+likhith:172
+amanda:187
+fahim:181
+meghna:88
+shshanas:210
+shahanaaas:221
+lal:173
+bos:168
+test2:28
+test3:137

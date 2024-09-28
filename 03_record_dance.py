@@ -2,7 +2,7 @@ import cv2
 import pygame
 
 
-cap = cv2.VideoCapture(1) 
+cap = cv2.VideoCapture(0) 
 
 # Define the codec and create a VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
