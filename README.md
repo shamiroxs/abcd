@@ -83,6 +83,14 @@ To set up the environment and install necessary libraries, follow these steps:
 
 ---
 
+#### Username Screen
+![Username Screen](./image/username.png)
+
+#### Leaderboard Screen
+![Leaderboard Screen](./image/leaderboard.png)
+
+---
+
 #### **How to Use the System**:
 1. Enter your name into the system using the interface on the laptop.
 2. Perform your dance on stage while the webcam records your performance.
