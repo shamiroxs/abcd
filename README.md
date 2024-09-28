@@ -84,10 +84,10 @@ To set up the environment and install necessary libraries, follow these steps:
 ---
 
 #### Username Screen
-![Username Screen](./image/username.png)
+![Username Screen](./image/Username.png)
 
 #### Leaderboard Screen
-![Leaderboard Screen](./image/leaderboard.png)
+![Leaderboard Screen](./image/Leaderboard.png)
 
 ---
 
