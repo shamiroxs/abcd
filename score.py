@@ -16,9 +16,6 @@ score = 0
 
 def calculate_distance(point1, point2):
     """Calculate Euclidean distance between two points (x1, y1) and (x2, y2)."""
-    # If either point is missing, return distance as 0
-    if point1 is None or point2 is None:
-        return 0
     return math.sqrt((point2[0] - point1[0]) ** 2 + (point2[1] - point1[1]) ** 2)
 
 def process_video(input_video):
@@ -73,8 +70,20 @@ def process_video(input_video):
         print(f"\nTotal Movement Score: {total_score:.5f}")
         display_score(total_score)  # Display score at the end
 
-        with open("lead.txt", "a") as file:  # Open file in append mode
-            file.write(f"{total_score:.0f}\n")  # Write username and score as a comma-separated line
+        # Step 1: Read the existing content of the file
+    with open("lead.txt", "r") as file:
+        content = file.read()
+
+    # Step 2: Remove the last character (slice off the last character)
+    content = content[:-2]
+
+    # Step 3: Write the modified content back to the file
+    with open("lead.txt", "w") as file:  # Open in write mode to overwrite the file
+        file.write(content)
+
+    # Step 4: Append new score or data to the file
+    with open("lead.txt", "a") as file:  # Open in append mode to add new content
+        file.write(f"{total_score:.0f}\n")  # Write new content (e.g., score)
 
     cap.release()
     cv2.destroyAllWindows()

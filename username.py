@@ -73,7 +73,7 @@ def username_input_window():
         sys.exit()
 
     with open("lead.txt", "a") as file:  # Open file in append mode
-        file.write(f"{username}:")  # Write username and score as a comma-separated line
+        file.write(f"{username}:0\n")  # Write username and score as a comma-separated line
     return username
 
 
