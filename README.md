@@ -15,6 +15,14 @@ Many people feel shy or hesitant to dance in front of others, especially on stag
 
 ---
 
+#### Username Screen
+![Username Screen](./image/Username.png)
+
+#### Leaderboard Screen
+![Leaderboard Screen](./image/Leaderboard.png)
+
+---
+
 #### **Hardware Requirements**:
 - **Classroom Projector**: To display live scores and the leaderboard.
 - **Webcam**: Used to record the dance session.
@@ -80,14 +88,6 @@ To set up the environment and install necessary libraries, follow these steps:
 6. **`score.py`**: This script calculates the movement score by comparing consecutive frames.
 7. **`load2.py`**: Displays the annotated video during scoring.
 8. **`lead.py`**: Displays the leaderboard in a Pygame window, showing participants' rankings and scores.
-
----
-
-#### Username Screen
-![Username Screen](./image/Username.png)
-
-#### Leaderboard Screen
-![Leaderboard Screen](./image/Leaderboard.png)
 
 ---
 
