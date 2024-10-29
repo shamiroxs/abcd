@@ -15,6 +15,9 @@ Many people feel shy or hesitant to dance in front of others, especially on stag
 
 ---
 
+#### Landmarks
+![Landmarks](./image/landmarks.png)
+
 #### Username Screen
 ![Username Screen](./image/Username.png)
 
